@@ -7,9 +7,6 @@ class BaseRequest():
     def __init__(self, timeout=BaseRequestConfig.timeout) -> None:
         self._session = None
         self._timeout = timeout
-        self._api_key = ""
-        self._username = ""
-        self._password = ""
     
         try:
             self._session = requests.session()
@@ -33,3 +30,11 @@ class BaseRequest():
             raise HTTPError(
                 f"The HTTP Request failed with status code: {req.status_code} \n at url { req.url }")
         return req.json()
+    
+    @property
+    def timeout(self):
+        return self._timeout
+
+    @timeout.setter
+    def timeout(self, value):
+        self._timeout = value

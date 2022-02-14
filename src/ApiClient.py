@@ -3,9 +3,7 @@ from .apis import Agent, Buddies
 
 class ApiClient():
     def __init__(self) -> None:
-        print("Hello from ApiClient init Funktion")
-        
-        self._agent = Agent()
+        self._agent   = Agent()
         self._buddies = Buddies()
     
     @property
