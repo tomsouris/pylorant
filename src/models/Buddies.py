@@ -1,18 +1,22 @@
 from marshmallow import Schema, fields
+from typing import List, Optional
+from pydantic import BaseModel
+from pydantic.generics import GenericModel
 
-class BuddieLevelsModel(Schema):
-    uuid        = fields.Str()
-    charmLevel  = fields.Int()
-    displayName = fields.Str()
-    displayIcon = fields.Str()
-    assetPath   = fields.Str()
+class BuddieLevelsModel(BaseModel):
+    uuid        : str
+    charmLevel  : int
+    displayName : str
+    displayIcon : str
+    assetPath   : str
 
-class BuddiesModel(Schema):
-    uuid               = fields.Str()
-    displayName        = fields.Str()
-    isHiddenIfNotOwned = fields.Bool()
-    themeUuid          = fields.Str(allow_none=True)
-    displayIcon        = fields.Str()
-    assetPath          = fields.Str()
-    levels             = fields.Nested(BuddieLevelsModel, many=True)
+class BuddiesModel(BaseModel):
+    uuid               : str
+    displayName        : str
+    isHiddenIfNotOwned : bool
+    themeUuid          : str = None
+    displayIcon        : str
+    assetPath          : str
+    # levels             : Nested(BuddieLevelsModel, many=True)
+    levels             : List[BuddieLevelsModel]
 

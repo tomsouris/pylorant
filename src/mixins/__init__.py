@@ -1,2 +1,2 @@
 from .UrlBuilder import UrlBuilder
-from .JsonValidate import JsonValidate
+from .Validator import Validator

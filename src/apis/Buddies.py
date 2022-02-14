@@ -1,38 +1,38 @@
 from ..base import BaseRequest
 from ..config import BaseRequestConfig
-from ..mixins import UrlBuilder, JsonValidate
+from ..mixins import UrlBuilder, Validator
 from ..models import BuddiesModel, BuddieLevelsModel
 
 class Buddies(BaseRequest):
     def __init__(self):
-        super().__init__()
+        super().__init__(5.00)
         self.base_url = BaseRequestConfig.base_url
-        self.timeout = 5.01
+        # self.timeout = 5.01
         
     def all(self):
         url      = UrlBuilder.url(self.base_url, "/buddies")
         response = BaseRequest.get(self, url)
-        model    = BuddiesModel()
+        model    = BuddiesModel
 
-        return JsonValidate.Validate(model=model, response=response, isArray=True)
+        return Validator.Validate(model=model, response=response)
     
     def by_uuid(self, uuid):
         url      = UrlBuilder.url(self.base_url, f"/buddies/{uuid}")
-        response = BaseRequest.get(self, url)
-        model    = BuddiesModel()
+        response = self.get(url)
+        model    = BuddiesModel
 
-        return JsonValidate.Validate(model=model, response=response, isArray=False)
+        return Validator.Validate(model=model, response=response)
     
     def levels(self):
         url      = UrlBuilder.url(self.base_url, f"/buddies/levels")
-        response = BaseRequest.get(self, url)
-        model    = BuddieLevelsModel()
+        response = self.get(self, url)
+        model    = BuddieLevelsModel
 
-        return JsonValidate.Validate(model=model, response=response, isArray=True)
+        return Validator.Validate(model=model, response=response)
 
     def levels_by_uuid(self, uuid):
         url      = UrlBuilder.url(self.base_url, f"/buddies/levels/{uuid}")
-        response = self.get(url)
-        model    = BuddieLevelsModel()
+        response = BaseRequest.get(self, url)
+        model    = BuddieLevelsModel
 
-        return JsonValidate.Validate(model=model, response=response, isArray=False)
+        return Validator.Validate(model=model, response=response)

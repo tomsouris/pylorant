@@ -7,7 +7,6 @@ class BaseRequest():
     def __init__(self, timeout=BaseRequestConfig.timeout) -> None:
         self._session = None
         self._timeout = timeout
-    
         try:
             self._session = requests.session()
             self._session.headers.update(BaseRequestConfig.headers)
