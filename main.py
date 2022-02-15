@@ -1,6 +1,8 @@
 from src.ApiClient import ApiClient
 from rich import print
 
+from src.models import Ceremonies
+
 
 val = ApiClient()
 # agent = val.agent.by_uuiid("add6443a-41bd-e414-f6ad-e58d267f4e95")
@@ -29,3 +31,11 @@ val = ApiClient()
 
 # bundles_uuid = val.bundles.by_uuid("4e3a244b-4482-0541-3eab-b8912cdb72d6")
 # print(bundles_uuid)
+
+# ceremonies = val.ceremonies.all()
+# print(ceremonies)
+
+# ceremonies = val.ceremonies.by_uuid("87c91747-4de4-635e-a64b-6ba4faeeae78")
+# print(f'-----> {ceremonies}')
+
+print(val.competitiveTier.all())
