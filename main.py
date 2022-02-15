@@ -61,4 +61,17 @@ val = ApiClient()
 
 # print(val.seasons.by_uuid("808202d6-4f2b-a8ff-1feb-b3a0590ad79f"))
 
-print(val.seasons.competitive_by_uuid("8d9e3688-470b-c0e0-5b20-ca964d907adb"))
+# print(val.seasons.competitive_by_uuid("8d9e3688-470b-c0e0-5b20-ca964d907adb"))
+# print(val.sprays.all())
+# print(val.sprays.levels_all())
+
+# print(val.themes.by_uuid("def525c9-4151-ab71-5a18-c7bff46d4e46"))
+# xxx = val.weapons.all()
+# print(xxx[0].weaponStats.adsStats.zoomMultiplier)
+
+# print(val.weapons.by_uuid("63e6c2b6-4a8e-869c-3d4c-e38355226584"))
+# print(val.weapons.skins_all())
+# print(val.weapons.skins_chroma_by_uuid("0b30b3e8-4696-7b7c-fed2-50b34234965a"))
+
+# print(val.weapons.skins_levels_by_uuid("b577585f-4171-19a1-2899-848460de8089"))
+print(val.version.current())
