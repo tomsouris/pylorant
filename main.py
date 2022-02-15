@@ -47,3 +47,6 @@ val = ApiClient()
 # print(val.currencies.by_uuid("564d8e28-c226-3180-6285-e48a390db8b1"))
 # print(val.events.all())
 # print(f'---->', val.events.by_uuid("7cf1fc2c-4456-fa8f-b9f6-c9be7092163f"))
+
+# print(val.gamemodes.all())
+# print(val.gamemodes.by_uuid("60f2e13a-4834-0a18-5f7b-02b1a97b7adb"))
