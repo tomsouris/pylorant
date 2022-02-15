@@ -1,6 +1,6 @@
 from ..base import BaseRequest
 from ..config import BaseRequestConfig
-from ..mixins import UrlBuilder
+from ..mixins import UrlBuilder, Validator
 from ..models import AgentModel
 from marshmallow.exceptions import ValidationError
 
@@ -17,7 +17,10 @@ class Agent(BaseRequest):
             _type_: json 
         """
         url = UrlBuilder.url(self.base_url, "/agents")
-        BaseRequest.get(self, url)
+        response = BaseRequest.get(self, url)
+        model    = AgentModel
+
+        return Validator.Validate(model=model, response=response)
     
     def by_uuiid(self, agentUuid) -> AgentModel:
         """_summary_
@@ -30,7 +33,6 @@ class Agent(BaseRequest):
         """
         url      = UrlBuilder.url(self.base_url, f'/agents/{agentUuid}')
         response = BaseRequest.get(self, url)
-        try:
-            return AgentModel().load(response["data"])
-        except ValidationError as err :
-            return err
+        model    = AgentModel
+
+        return Validator.Validate(model=model, response=response)

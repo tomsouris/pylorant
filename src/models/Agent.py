@@ -1,46 +1,48 @@
-from marshmallow import Schema, fields
+from typing import List, Optional
+from pydantic import BaseModel
+from pydantic.generics import GenericModel
 
-class MediaList(Schema):
-    id    = fields.Int()
-    wwise = fields.Str()
-    wave  = fields.Str()
+class MediaList(BaseModel):
+    id    : int
+    wwise : str
+    wave  : str
 
-class VoiceLine(Schema):
-    minDuration = fields.Int()
-    maxDuration = fields.Int()
-    mediaList   = fields.Nested(MediaList, many=True)
+class VoiceLine(BaseModel):
+    minDuration : int
+    maxDuration : int
+    mediaList   : List[MediaList]
 
-class Role(Schema):
-    uuid        = fields.Str()
-    displayName = fields.Str()
-    description = fields.Str()
-    displayIcon = fields.Str()
-    assetPath   = fields.Str()
+class Role(BaseModel):
+    uuid        : str
+    displayName : str
+    description : str
+    displayIcon : str
+    assetPath   : str
 
-class Abilities(Schema):
-    slot        = fields.Str()
-    displayName = fields.Str()
-    description = fields.Str()
-    displayIcon = fields.Str()
+class Abilities(BaseModel):
+    slot        : str
+    displayName : str
+    description : str
+    displayIcon : str
 
-class AgentModel(Schema):
-    uuid                      = fields.Str()
-    displayName               = fields.Str()
-    description               = fields.Str()
-    developerName             = fields.Str()
-    characterTags             = fields.Raw()
-    displayIcon               = fields.Str()
-    displayIconSmall          = fields.Str()
-    bustPortrait              = fields.Str()
-    fullPortrait              = fields.Str()
-    killfeedPortrait          = fields.Str()
-    assetPath                 = fields.Str()
-    background                = fields.Str()
-    isFullPortraitRightFacing = fields.Bool()
-    isPlayableCharacter       = fields.Bool()
-    isAvailableForTest        = fields.Bool()
-    isBaseContent             = fields.Bool()
-    role                      = fields.Nested(Role())
-    abilities                 = fields.Nested(Abilities, many=True)
-    voiceLine                 = fields.Nested(VoiceLine())
+class AgentModel(BaseModel):
+    uuid                      : str
+    displayName               : str
+    description               : str
+    developerName             : str
+    # characterTags             : str = None
+    displayIcon               : str
+    displayIconSmall          : str
+    bustPortrait              : str
+    fullPortrait              : str
+    killfeedPortrait          : str
+    assetPath                 : str
+    background                : str
+    isFullPortraitRightFacing : bool
+    isPlayableCharacter       : bool
+    isAvailableForTest        : bool
+    isBaseContent             : bool
+    role                      : Role
+    abilities                 : List[Abilities]
+    voiceLine                 : VoiceLine
 

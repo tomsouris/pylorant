@@ -1,4 +1,3 @@
-from marshmallow import Schema, fields
 from typing import List, Optional
 from pydantic import BaseModel
 from pydantic.generics import GenericModel
@@ -17,6 +16,5 @@ class BuddiesModel(BaseModel):
     themeUuid          : str = None
     displayIcon        : str
     assetPath          : str
-    # levels             : Nested(BuddieLevelsModel, many=True)
     levels             : List[BuddieLevelsModel]
 
