@@ -1,4 +1,3 @@
-from ast import Raise
 from requests.exceptions import HTTPError
 import requests
 from ..config import BaseRequestConfig

@@ -11,3 +11,4 @@ from .GameModes import GameModesModel
 from .Gear import GearModel
 from .Maps import MapsModel
 from .PlayerCards import PlayerCardsModel
+from .Seasons import SeasonsModel, CompetitiveSeasonsModel

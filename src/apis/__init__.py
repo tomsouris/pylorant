@@ -11,3 +11,4 @@ from .GameModes import GameModes
 from .Gear import Gear
 from .Maps import Maps
 from .PlayerCards import PlayerCards
+from .Seasons import Seasons

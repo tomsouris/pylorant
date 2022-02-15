@@ -56,5 +56,9 @@ val = ApiClient()
 
 # print(val.maps.all())
 # print(val.maps.by_uuid("2bee0dc9-4ffe-519b-1cbd-7fbe763a6047"))
-print(val.playercards.all())
-print(val.playercards.by_uuid("a75c951f-4822-f85d-44ed-709e413aa5f8"))
+# print(val.playercards.all())
+# print(val.playercards.by_uuid("a75c951f-4822-f85d-44ed-709e413aa5f8"))
+
+# print(val.seasons.by_uuid("808202d6-4f2b-a8ff-1feb-b3a0590ad79f"))
+
+print(val.seasons.competitive_by_uuid("8d9e3688-470b-c0e0-5b20-ca964d907adb"))
