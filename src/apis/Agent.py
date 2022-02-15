@@ -22,7 +22,7 @@ class Agent(BaseRequest):
 
         return Validator.Validate(model=model, response=response)
     
-    def by_uuiid(self, agentUuid) -> AgentModel:
+    def by_uuid(self, agentUuid) -> AgentModel:
         """_summary_
             Returns data and assets of one agent
         Args:

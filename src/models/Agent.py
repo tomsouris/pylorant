@@ -23,7 +23,7 @@ class Abilities(BaseModel):
     slot        : str
     displayName : str
     description : str
-    displayIcon : str
+    displayIcon : str = None
 
 class AgentModel(BaseModel):
     uuid                      : str
@@ -33,16 +33,16 @@ class AgentModel(BaseModel):
     # characterTags             : str = None
     displayIcon               : str
     displayIconSmall          : str
-    bustPortrait              : str
-    fullPortrait              : str
+    bustPortrait              : str = None
+    fullPortrait              : str = None
     killfeedPortrait          : str
     assetPath                 : str
-    background                : str
+    background                : str = None
     isFullPortraitRightFacing : bool
     isPlayableCharacter       : bool
     isAvailableForTest        : bool
     isBaseContent             : bool
-    role                      : Role
+    role                      : Role = None
     abilities                 : List[Abilities]
     voiceLine                 : VoiceLine
 
