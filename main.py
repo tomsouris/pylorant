@@ -1,12 +1,10 @@
 from src.ApiClient import ApiClient
 from rich import print
 
-from src.models import Ceremonies
-
-
 val = ApiClient()
-# agent = val.agent.by_uuiid("add6443a-41bd-e414-f6ad-e58d267f4e95")
-# print(agent)
+
+agent = val.agent.by_uuid("add6443a-41bd-e414-f6ad-e58d267f4e95")
+print(agent)
 
 # buddies = val.buddies.all()
 # print(buddies[0].uuid)
