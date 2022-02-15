@@ -10,11 +10,11 @@ class shopDataModel(BaseModel):
     cost                    : int
     category                : str
     categoryText            : str
-    gridPosition            : GridPositionModel
+    gridPosition            : GridPositionModel = None
     canBeTrashed            : bool
-    image                   : str
+    image                   : str = None
     newImage                : str
-    newImage2               : str
+    newImage2               : str = None
     assetPath               : str
 
 class GearModel(BaseModel):
@@ -24,6 +24,6 @@ class GearModel(BaseModel):
     displayIcon               : str
     assetPath                 : str
     shopData                  : shopDataModel
-    background                : str
-    isFullPortraitRightFacing : bool
+    background                : str  = None
+    isFullPortraitRightFacing : bool = None
 

@@ -52,4 +52,4 @@ val = ApiClient()
 # print(val.gamemodes.all())
 # print(val.gamemodes.by_uuid("57038d6d-49b1-3a74-c5ef-3395d9f23a97"))
 
-# print(val.gear.all())
+print(val.gear.all())
