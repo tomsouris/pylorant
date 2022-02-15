@@ -5,12 +5,12 @@ from pydantic.generics import GenericModel
 class BundlesModel(BaseModel): 
     uuid                   : str
     displayName            : str
-    displayNameSubText     : str
+    displayNameSubText     : str = None
     description            : str
-    extraDescription       : str
-    promoDescription       : str
+    extraDescription       : str = None
+    promoDescription       : str = None
     useAdditionalContext   : bool
     displayIcon            : str
     displayIcon2           : str
-    verticalPromoImage     : str
+    verticalPromoImage     : str = None
     assetPath              : str

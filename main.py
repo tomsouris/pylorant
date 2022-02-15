@@ -6,8 +6,8 @@ val = ApiClient()
 # agent = val.agent.by_uuiid("add6443a-41bd-e414-f6ad-e58d267f4e95")
 # print(agent)
 
-buddies = val.buddies.all()
-print(buddies[0].uuid)
+# buddies = val.buddies.all()
+# print(buddies[0].uuid)
 # print(buddies)
 # for bud in buddies:
 #     for k, v in bud.items():
@@ -25,3 +25,7 @@ print(buddies[0].uuid)
 
 
 # bundles = val.bundles.all()
+# print(bundles[0].assetPath)
+
+# bundles_uuid = val.bundles.by_uuid("4e3a244b-4482-0541-3eab-b8912cdb72d6")
+# print(bundles_uuid)

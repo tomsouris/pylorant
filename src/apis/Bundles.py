@@ -13,7 +13,6 @@ class Bundles(BaseRequest):
         url      = UrlBuilder.url(self.base_url, "/bundles")
         response = BaseRequest.get(self, url)
         model    = BundlesModel
-        print(response)
 
         return Validator.Validate(model=model, response=response)
     
