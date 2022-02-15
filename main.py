@@ -44,4 +44,6 @@ val = ApiClient()
 
 # print(val.contracts.all())
 # contracts = val.contracts.by_uuid("bfb8160e-eee0-46b1-a069-16f93adc7328")
-print(val.currencies.by_uuid("564d8e28-c226-3180-6285-e48a390db8b1"))
+# print(val.currencies.by_uuid("564d8e28-c226-3180-6285-e48a390db8b1"))
+# print(val.events.all())
+# print(f'---->', val.events.by_uuid("7cf1fc2c-4456-fa8f-b9f6-c9be7092163f"))

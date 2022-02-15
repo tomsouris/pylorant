@@ -6,3 +6,4 @@ from .CompetitiveTier import CompetitiveTier
 from .ContentTiers import ContentTiers
 from .Contracts import Contracts
 from .Currencies import Currencies
+from .Events import Events

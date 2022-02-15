@@ -6,3 +6,4 @@ from .CompetitiveTiers import CompetitiveTiersModel
 from .ContentTiers import ContentTiersModel
 from .Contracts import ContractsModel
 from .Currencies import CurrenciesModel
+from .Events import EventsModel

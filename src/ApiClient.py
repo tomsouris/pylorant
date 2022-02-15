@@ -1,6 +1,6 @@
 from src.apis.Currencies import Currencies
 from .apis import (Agent, Buddies, Bundles, Ceremonies, CompetitiveTier,
-                    ContentTiers, Contracts, Currencies)
+                    ContentTiers, Contracts, Currencies, Events)
 
 
 class ApiClient():
@@ -13,6 +13,7 @@ class ApiClient():
         self._content_tier     = ContentTiers()
         self._contracts        = Contracts()
         self._currencies       = Currencies()
+        self._events           = Events()
 
     @property
     def agent(self) -> Agent:
@@ -93,3 +94,13 @@ class ApiClient():
             Valorant: _description_
         """
         return self._currencies
+
+    @property
+    def events(self) -> Events:
+        """_summary_
+        Interface to the Events APIs
+
+        Returns:
+            Valorant: _description_
+        """
+        return self._events
