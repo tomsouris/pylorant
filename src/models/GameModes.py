@@ -19,7 +19,7 @@ class GameModesModel(BaseModel):
     isTeamVoiceAllowed       : str = None
     isMinimapHidden          : str = None
     orbCount                 : str = None
-    teamRoles                : str = None
+    teamRoles                : List[str] = None
     gameFeatureOverrides     : List[GameFeatureOverridesModel]  = None
     gameRuleBoolOverrides    : List[GameRuleBoolOverridesModel] = None
     displayIcon              : str = None

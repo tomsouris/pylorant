@@ -44,9 +44,12 @@ val = ApiClient()
 
 # print(val.contracts.all())
 # contracts = val.contracts.by_uuid("bfb8160e-eee0-46b1-a069-16f93adc7328")
-# print(val.currencies.by_uuid("564d8e28-c226-3180-6285-e48a390db8b1"))
+# print(val.currencies.by_uuid("e59aa87c-4cbf-517a-5983-6e81511be9b7"))
+
 # print(val.events.all())
-# print(f'---->', val.events.by_uuid("7cf1fc2c-4456-fa8f-b9f6-c9be7092163f"))
+# print(f'---->', val.events.by_uuid("cee09894-41d6-7000-848b-ea9de6c28f44"))
 
 # print(val.gamemodes.all())
-# print(val.gamemodes.by_uuid("60f2e13a-4834-0a18-5f7b-02b1a97b7adb"))
+# print(val.gamemodes.by_uuid("57038d6d-49b1-3a74-c5ef-3395d9f23a97"))
+
+# print(val.gear.all())

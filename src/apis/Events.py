@@ -10,14 +10,14 @@ class Events(BaseRequest):
         # self.timeout = 5.01
         
     def all(self):
-        url      = UrlBuilder.url(self.base_url, "/buddies")
+        url      = UrlBuilder.url(self.base_url, "/events")
         response = BaseRequest.get(self, url)
         model    = EventsModel
 
         return Validator.Validate(model=model, response=response)
     
     def by_uuid(self, uuid):
-        url      = UrlBuilder.url(self.base_url, f"/buddies/{uuid}")
+        url      = UrlBuilder.url(self.base_url, f"/events/{uuid}")
         response = self.get(url)
         model    = EventsModel
 

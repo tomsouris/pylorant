@@ -8,3 +8,4 @@ from .Contracts import Contracts
 from .Currencies import Currencies
 from .Events import Events
 from .GameModes import GameModes
+from .Gear import Gear
