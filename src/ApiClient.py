@@ -1,6 +1,6 @@
 from src.apis.Currencies import Currencies
 from .apis import (Agent, Buddies, Bundles, Ceremonies, CompetitiveTier,
-                    ContentTiers, Contracts, Currencies, Events, GameModes, Gear)
+                    ContentTiers, Contracts, Currencies, Events, GameModes, Gear, Maps, PlayerCards)
 
 
 class ApiClient():
@@ -16,6 +16,8 @@ class ApiClient():
         self._events           = Events()
         self._game_modes       = GameModes()
         self._gear             = Gear()
+        self._maps             = Maps()
+        self._player_cards     = PlayerCards()
 
     @property
     def agent(self) -> Agent:
@@ -126,3 +128,23 @@ class ApiClient():
             Valorant: _description_
         """
         return self._gear
+
+    @property
+    def maps(self) -> Maps:
+        """_summary_
+        Interface to the Maps APIs
+
+        Returns:
+            Valorant: _description_
+        """
+        return self._maps
+
+    @property
+    def playercards(self) -> PlayerCards:
+        """_summary_
+        Interface to the PlayerCards APIs
+
+        Returns:
+            Valorant: _description_
+        """
+        return self._player_cards

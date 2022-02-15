@@ -9,3 +9,5 @@ from .Currencies import CurrenciesModel
 from .Events import EventsModel
 from .GameModes import GameModesModel
 from .Gear import GearModel
+from .Maps import MapsModel
+from .PlayerCards import PlayerCardsModel

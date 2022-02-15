@@ -52,4 +52,9 @@ val = ApiClient()
 # print(val.gamemodes.all())
 # print(val.gamemodes.by_uuid("57038d6d-49b1-3a74-c5ef-3395d9f23a97"))
 
-print(val.gear.all())
+# print(val.gear.all())
+
+# print(val.maps.all())
+# print(val.maps.by_uuid("2bee0dc9-4ffe-519b-1cbd-7fbe763a6047"))
+print(val.playercards.all())
+print(val.playercards.by_uuid("a75c951f-4822-f85d-44ed-709e413aa5f8"))
