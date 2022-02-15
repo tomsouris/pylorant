@@ -38,4 +38,10 @@ val = ApiClient()
 # ceremonies = val.ceremonies.by_uuid("87c91747-4de4-635e-a64b-6ba4faeeae78")
 # print(f'-----> {ceremonies}')
 
-print(val.competitiveTier.all())
+# print(val.competitiveTier.all())
+# print(val.contentTier.all())
+# print(val.contentTier.by_uuid("564d8e28-c226-3180-6285-e48a390db8b1"))
+
+# print(val.contracts.all())
+# contracts = val.contracts.by_uuid("bfb8160e-eee0-46b1-a069-16f93adc7328")
+print(val.currencies.by_uuid("564d8e28-c226-3180-6285-e48a390db8b1"))

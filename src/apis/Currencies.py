@@ -1,9 +1,9 @@
 from ..base import BaseRequest
 from ..config import BaseRequestConfig
 from ..mixins import UrlBuilder, Validator
-from ..models import CompetitiveTiersModel
+from ..models import CurrenciesModel
 
-class CompetitiveTier(BaseRequest):
+class Currencies(BaseRequest):
     def __init__(self):
         super().__init__()
         self.base_url = BaseRequestConfig.base_url
@@ -11,13 +11,13 @@ class CompetitiveTier(BaseRequest):
     def all(self):
         url      = UrlBuilder.url(self.base_url, "/competitivetiers")
         response = BaseRequest.get(self, url)
-        model    = CompetitiveTiersModel
+        model    = CurrenciesModel
 
         return Validator.Validate(model=model, response=response)
     
     def by_uuid(self, uuid):
         url      = UrlBuilder.url(self.base_url, f"/competitivetiers/{uuid}")
         response = self.get(url)
-        model    = CompetitiveTiersModel
+        model    = CurrenciesModel
 
         return Validator.Validate(model=model, response=response)
